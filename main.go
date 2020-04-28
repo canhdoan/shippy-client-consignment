@@ -32,7 +32,7 @@ func main() {
 	service := micro.NewService(micro.Name("shippy.consignment.cli"))
 	service.Init()
 
-	client := pb.NewShippingServiceClient("shippy.service.consignment", service.Client())
+	client := pb.NewShippingServiceClient("go.micro.srv.consignment", service.Client())
 
 	file := defaultFilename
 	if len(os.Args) > 1 {
